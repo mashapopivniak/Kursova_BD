@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClinicDataSet" targetNamespace="http://tempuri.org/ClinicDataSet.xsd" xmlns:mstns="http://tempuri.org/ClinicDataSet.xsd" xmlns="http://tempuri.org/ClinicDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClinicConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.winForm.Properties.Settings.GlobalReference.Default.ClinicConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vDoctorPatientsTableAdapter" GeneratorDataComponentClassName="vDoctorPatientsTableAdapter" Name="vDoctorPatients" UserDataComponentName="vDoctorPatientsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="dbo.vDoctorPatients" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DoctorName, PatientName, DiseaseBegin, DiseaseEnd, Cured FROM dbo.vDoctorPatients</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DoctorName" DataSetColumn="DoctorName" />
+              <Mapping SourceColumn="PatientName" DataSetColumn="PatientName" />
+              <Mapping SourceColumn="DiseaseBegin" DataSetColumn="DiseaseBegin" />
+              <Mapping SourceColumn="DiseaseEnd" DataSetColumn="DiseaseEnd" />
+              <Mapping SourceColumn="Cured" DataSetColumn="Cured" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vPatientHistoriesTableAdapter" GeneratorDataComponentClassName="vPatientHistoriesTableAdapter" Name="vPatientHistories" UserDataComponentName="vPatientHistoriesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="dbo.vPatientHistories" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Patient, DiseaseName, MedicationName FROM dbo.vPatientHistories</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Patient" DataSetColumn="Patient" />
+              <Mapping SourceColumn="DiseaseName" DataSetColumn="DiseaseName" />
+              <Mapping SourceColumn="MedicationName" DataSetColumn="MedicationName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vDoctorWorkloadsTableAdapter" GeneratorDataComponentClassName="vDoctorWorkloadsTableAdapter" Name="vDoctorWorkloads" UserDataComponentName="vDoctorWorkloadsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="dbo.vDoctorWorkloads" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DoctorName, MY, PatientID FROM dbo.vDoctorWorkloads</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DoctorName" DataSetColumn="DoctorName" />
+              <Mapping SourceColumn="MY" DataSetColumn="MY" />
+              <Mapping SourceColumn="PatientID" DataSetColumn="PatientID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClinicDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ClinicDataSet" msprop:Generator_UserDSName="ClinicDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vDoctorPatients" msprop:Generator_TableClassName="vDoctorPatientsDataTable" msprop:Generator_TableVarName="tablevDoctorPatients" msprop:Generator_TablePropName="vDoctorPatients" msprop:Generator_RowDeletingName="vDoctorPatientsRowDeleting" msprop:Generator_RowChangingName="vDoctorPatientsRowChanging" msprop:Generator_RowEvHandlerName="vDoctorPatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="vDoctorPatientsRowDeleted" msprop:Generator_UserTableName="vDoctorPatients" msprop:Generator_RowChangedName="vDoctorPatientsRowChanged" msprop:Generator_RowEvArgName="vDoctorPatientsRowChangeEvent" msprop:Generator_RowClassName="vDoctorPatientsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DoctorName" msprop:Generator_ColumnVarNameInTable="columnDoctorName" msprop:Generator_ColumnPropNameInRow="DoctorName" msprop:Generator_ColumnPropNameInTable="DoctorNameColumn" msprop:Generator_UserColumnName="DoctorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPatientName" msprop:Generator_ColumnPropNameInRow="PatientName" msprop:Generator_ColumnPropNameInTable="PatientNameColumn" msprop:Generator_UserColumnName="PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiseaseBegin" msprop:Generator_ColumnVarNameInTable="columnDiseaseBegin" msprop:Generator_ColumnPropNameInRow="DiseaseBegin" msprop:Generator_ColumnPropNameInTable="DiseaseBeginColumn" msprop:Generator_UserColumnName="DiseaseBegin" type="xs:dateTime" />
+              <xs:element name="DiseaseEnd" msprop:Generator_ColumnVarNameInTable="columnDiseaseEnd" msprop:Generator_ColumnPropNameInRow="DiseaseEnd" msprop:Generator_ColumnPropNameInTable="DiseaseEndColumn" msprop:Generator_UserColumnName="DiseaseEnd" type="xs:dateTime" />
+              <xs:element name="Cured" msprop:Generator_ColumnVarNameInTable="columnCured" msprop:Generator_ColumnPropNameInRow="Cured" msprop:Generator_ColumnPropNameInTable="CuredColumn" msprop:Generator_UserColumnName="Cured" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vPatientHistories" msprop:Generator_TableClassName="vPatientHistoriesDataTable" msprop:Generator_TableVarName="tablevPatientHistories" msprop:Generator_RowChangedName="vPatientHistoriesRowChanged" msprop:Generator_TablePropName="vPatientHistories" msprop:Generator_RowDeletingName="vPatientHistoriesRowDeleting" msprop:Generator_RowChangingName="vPatientHistoriesRowChanging" msprop:Generator_RowEvHandlerName="vPatientHistoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="vPatientHistoriesRowDeleted" msprop:Generator_RowClassName="vPatientHistoriesRow" msprop:Generator_UserTableName="vPatientHistories" msprop:Generator_RowEvArgName="vPatientHistoriesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Patient" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPatient" msprop:Generator_ColumnPropNameInRow="Patient" msprop:Generator_ColumnPropNameInTable="PatientColumn" msprop:Generator_UserColumnName="Patient" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiseaseName" msprop:Generator_ColumnVarNameInTable="columnDiseaseName" msprop:Generator_ColumnPropNameInRow="DiseaseName" msprop:Generator_ColumnPropNameInTable="DiseaseNameColumn" msprop:Generator_UserColumnName="DiseaseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MedicationName" msprop:Generator_ColumnVarNameInTable="columnMedicationName" msprop:Generator_ColumnPropNameInRow="MedicationName" msprop:Generator_ColumnPropNameInTable="MedicationNameColumn" msprop:Generator_UserColumnName="MedicationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vDoctorWorkloads" msprop:Generator_TableClassName="vDoctorWorkloadsDataTable" msprop:Generator_TableVarName="tablevDoctorWorkloads" msprop:Generator_TablePropName="vDoctorWorkloads" msprop:Generator_RowDeletingName="vDoctorWorkloadsRowDeleting" msprop:Generator_RowChangingName="vDoctorWorkloadsRowChanging" msprop:Generator_RowEvHandlerName="vDoctorWorkloadsRowChangeEventHandler" msprop:Generator_RowDeletedName="vDoctorWorkloadsRowDeleted" msprop:Generator_UserTableName="vDoctorWorkloads" msprop:Generator_RowChangedName="vDoctorWorkloadsRowChanged" msprop:Generator_RowEvArgName="vDoctorWorkloadsRowChangeEvent" msprop:Generator_RowClassName="vDoctorWorkloadsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DoctorName" msprop:Generator_ColumnVarNameInTable="columnDoctorName" msprop:Generator_ColumnPropNameInRow="DoctorName" msprop:Generator_ColumnPropNameInTable="DoctorNameColumn" msprop:Generator_UserColumnName="DoctorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMY" msprop:Generator_ColumnPropNameInRow="MY" msprop:Generator_ColumnPropNameInTable="MYColumn" msprop:Generator_UserColumnName="MY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientID" msprop:Generator_ColumnVarNameInTable="columnPatientID" msprop:Generator_ColumnPropNameInRow="PatientID" msprop:Generator_ColumnPropNameInTable="PatientIDColumn" msprop:Generator_UserColumnName="PatientID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
