@@ -19,7 +19,7 @@ namespace winForm
 
         private void formvDoctorWorkloads_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ClinicDataSet.vDoctorWorkloads' table. You can move, or remove it, as needed.
+
             this.vDoctorWorkloadsTableAdapter.Fill(this.ClinicDataSet.vDoctorWorkloads);
 
             this.reportViewer1.RefreshReport();
